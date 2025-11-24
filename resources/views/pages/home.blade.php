@@ -6,7 +6,7 @@
 
 <style>
     html, body {
-        overflow-x: hidden;   /* 🔒 kunci agar tidak bisa digeser ke samping */
+        overflow-x: hidden;   /* 🔒 kunci agar tidak bisa digeser ke samping */
     }
 </style>
 
@@ -14,28 +14,27 @@
 <div class="container-fluid p-0">
 
     <div class="position-relative text-white"
-         style="
-            height: 420px;
-            background-image: url('{{ asset('images/gymnastic.png') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
-         ">
+          style="
+             height: 420px;
+             background-image: url('{{ asset('images/gymnastic.png') }}');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+           ">
 
-        <!-- WRAPPER TENGAH -->
         <div style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            max-width: 900px;
-            text-align: center;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 90%;
+             max-width: 900px;
+             text-align: center;
         ">
 
             <h2 class="fw-bold"
-                style="color:white; font-size:32px; margin-bottom:15px;">
+                 style="color:white; font-size:32px; margin-bottom:15px;">
                 Gold medals aren't really made of gold.
             </h2>
 
@@ -46,18 +45,18 @@
 
             <a href="/training"
                style="
-                    display: inline-block;
-                    padding: 12px 32px;
-                    font-size: 17px;
-                    font-weight: 600;
-                    margin-top: 25px;
-                    color: #ffffff;
-                    text-decoration: none;
-                    background: linear-gradient(90deg, #5275B0, #3C5071);
-                    border-radius: 20px;
-                    border: 1px solid rgba(255,255,255,0.3);
-                    box-shadow: inset 0 2px 4px rgba(255,255,255,0.3),
-                                inset 0 -2px 4px rgba(0,0,0,0.2);
+                       display: inline-block;
+                       padding: 12px 32px;
+                       font-size: 17px;
+                       font-weight: 600;
+                       margin-top: 25px;
+                       color: #ffffff;
+                       text-decoration: none;
+                       background: linear-gradient(90deg, #5275B0, #3C5071);
+                       border-radius: 20px;
+                       border: 1px solid rgba(255,255,255,0.3);
+                       box-shadow: inset 0 2px 4px rgba(255,255,255,0.3),
+                                   inset 0 -2px 4px rgba(0,0,0,0.2);
                ">
                 Mulai Trial 1 Hari Gratis
             </a>
@@ -107,7 +106,7 @@
                     background: linear-gradient(90deg, #5275B0, #3C5071);
                     border-radius: 20px;
                     box-shadow: inset 0 2px 4px rgba(255,255,255,0.3),
-                                inset 0 -2px 4px rgba(0,0,0,0.2);
+                                 inset 0 -2px 4px rgba(0,0,0,0.2);
 
                     width: fit-content;
                     margin-left: 35%;
@@ -133,13 +132,13 @@
                 overflow: visible;
             ">
                 <img src="{{ asset('images/ritmik_bola.png') }}"
-                     style="
-                        width: 330px;
-                        border-radius: 18px;
-                        position: relative;
-                        left: -38px;
-                        top: 0;
-                     ">
+                      style="
+                          width: 330px;
+                          border-radius: 18px;
+                          position: relative;
+                          left: -38px;
+                          top: 0;
+                      ">
             </div>
         </div>
 
@@ -148,10 +147,9 @@
 </div>
 
 {{-- FOOTER --}}
-<!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-<footer class="mt-5 py-5"
+<footer id="tentang-kami" class="mt-5 py-5"
     style="
         background: linear-gradient(135deg, #152245, #1C2C5B, #243B78);
         color:white;
@@ -160,18 +158,15 @@
 
     <div class="container">
 
-        <!-- TITLE -->
         <h4 class="fw-bold text-center mb-4"
             style="font-size: 26px; letter-spacing: 1px;">
             PEARL ARTISTIC GYMNASTIC
         </h4>
 
-        <!-- Divider -->
         <hr style="border-color: rgba(255,255,255,0.3); margin-bottom: 35px;">
 
         <div class="row text-center text-md-start">
 
-            <!-- TENTANG -->
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold mb-3" style="font-size: 20px;">TENTANG</h5>
 
@@ -184,7 +179,6 @@
                 </p>
             </div>
 
-            <!-- KANTOR -->
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold mb-3" style="font-size: 20px;">KANTOR</h5>
 
@@ -197,7 +191,6 @@
                 </p>
             </div>
 
-            <!-- KONTAK -->
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold mb-3" style="font-size: 20px;">KONTAK</h5>
 
@@ -212,7 +205,6 @@
 
         </div>
 
-        <!-- Bottom Divider -->
         <hr style="border-color: rgba(255,255,255,0.2); margin-top: 35px;">
 
         <p class="text-center mt-3" style="font-size: 14px; opacity: 0.8;">

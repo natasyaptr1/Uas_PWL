@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id('id_user'); // Primary Key
             $table->string('username', 50)->unique(); // nama pengguna untuk login
+            $table->string('email')->unique();
             $table->string('password'); // kata sandi terenkripsi
             $table->enum('role', ['Admin', 'Member']); // peran pengguna
             $table->rememberToken(); // untuk Laravel Sanctum atau fitur 'Remember Me'

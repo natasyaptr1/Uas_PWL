@@ -2,49 +2,37 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable // atau bisa juga Model biasa jika tidak digunakan untuk auth
+class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use Notifiable;
 
-    protected $table = 'users';
+    // --- ID KUSTOM ---
     protected $primaryKey = 'id_user';
-    public $timestamps = true; // Karena migrasi kita menyertakan timestamps
+    // Timestamps otomatis diaktifkan (default true)
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'username',
+        'email',
         'password',
         'role',
+        // 'remember_token' tidak perlu di fillable karena dikelola otomatis
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    // Relasi: Satu User adalah satu Admin
-    public function admin()
-    {
-        return $this->hasOne(Admin::class, 'id_user', 'id_user');
-    }
-
-    // Relasi: Satu User adalah satu Member
+    // Tambahkan relasi ini:
     public function member()
     {
+        // User (Wali Murid) memiliki SATU data Member (Murid/Anak)
+        // Relasi menggunakan kolom 'id_user' di tabel 'member' dan 'id_user' di tabel 'users'
         return $this->hasOne(Member::class, 'id_user', 'id_user');
     }
+
 }
+
